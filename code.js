@@ -22,10 +22,10 @@ function dijkstra(graph, sourceNode) {
 
         // loop through the positions in the adjacency matrix to find
         // the minimum path to the next node
-        for (edge in graph) {
-            if (visited[edge] == false && dist[edge] <= min) {
-                min = dist[edge];
-                index = edge;
+        for (node in graph) {
+            if (visited[node] == false && dist[node] <= min) {
+                min = dist[node];
+                index = node;
             }
         }
 
