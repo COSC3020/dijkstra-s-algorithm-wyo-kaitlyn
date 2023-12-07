@@ -1,3 +1,4 @@
+[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-718a45dd9cf7e7f842a935f5ebbe5719a5e09af4491e668f4dbf3b35d5cca122.svg)](https://classroom.github.com/online_ide?assignment_repo_id=12474253&assignment_repo_type=AssignmentRepo)
 # Dijkstra's Algorithm
 
 Recall the pseudocode for Dijkstra's algorithm:
@@ -19,3 +20,16 @@ to be the most efficient one!
 
 What is the big $\Theta$ complexity of your implementation? Add your
 answer, including your reasoning, to this markdown file.
+
+My implementation first iterates over all the vertices to create the arrays for distance and visited -
+giving a time of $\Theta |V|$.  It then does that again for the main loop body, with two further loops inside.
+These second internal loops iterate over the vertices, and then the edges.  
+
+This means my complexity should be - 
+
+$\Theta ( |V| + |V|(|V| + |E|) )$
+
+= $\Theta ( |V| + |V^2| + |E| )$
+
+= $\Theta ( |V^2| + |E|) )$
+
